@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Welcome to Percentage section !</h1>
+        <h1 style="font-size: 50px;" class="text-warning text-lg-center m-5">&#37;</h1>
+    </div>
+    <p class="text-center m-4">Here you can calculate Percentage of your marks. It contains five subject section you
+        have to type all your five subject marks and click on calculate button to calculate your Percentage. To do
+        Calculation please proceed further ...</p>
+
+    <div class="card m-5 text-center">
+        <h5 class="card-header">Percentage</h5>
+        <div class="card-body">
+            <h5 class="card-title">Enter marks of all five subjects!</h5>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Marks</span>
+                    </div>
+                    <input required type="number" name="subject1" aria-label="subject1" class="form-control">
+                    <input required type="number" name="subject2" aria-label="subject2" class="form-control">
+                    <input required type="number" name="subject3" aria-label="subject3" class="form-control">
+                    <input required type="number" name="subject4" aria-label="subject3" class="form-control">
+                    <input required type="number" name="subject5" aria-label="subject4" class="form-control">
+                </div>
+                <button href="#" class="btn btn-success m-4">Calculate</button>
+            </form>
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

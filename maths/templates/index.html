@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+	<div class="innertube">
+		<h1 class="text-center text-danger m-5">Hey, Welcome to Calculation Eco System</h1>
+	</div>
+	<h6 class="text-center m-4">Here you can do various types of Mathematical Calculation. If you want to any specific
+		calculation you can automatically move to that section. To check our calculation section please proceed further
+		...</h6>
+	<div class="container card-deck mb-5">
+		<div class="card">
+			<img src="https://previews.123rf.com/images/frender/frender1609/frender160900066/62341955-3d-percentage-sign-isolated-on-white-background.jpg"
+				class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Percentage</h5>
+				<p class="card-text">In this section you can find Percentage of five subjects with just one click. It's
+					very helpful to find Percentage easily ...</p>
+			</div>
+			<a href="/percentage" class="btn btn-primary">Go to Percentage</a>
+		</div>
+		<div class="card">
+			<img src="https://images.squarespace-cdn.com/content/5c101a4e7c9327fdf174b93b/1559675454329-IUTDL7OPUDM0X2OUTAT6/?content-type=image%2Fjpeg"
+				class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Average</h5>
+				<p class="card-text">In this section you can find Average of five subjects with just one click. It's
+					very helpful to find Average easily ...</p>
+			</div>
+			<a href="/average" class="btn btn-primary">Go to Average</a>
+		</div>
+		<div class="card">
+			<img src="https://i.pinimg.com/474x/47/22/7c/47227cf132d1e715b32a7c4026a7a44a.jpg" class="card-img-top"
+				alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Quadratic Equation</h5>
+				<p class="card-text">In this section you can find Quadratic Equation of five subjects with just one
+					click. It's
+					very helpful to find Quadratic Equation easily ...</p>
+			</div>
+			<a href="/quadratic_equation" class="btn btn-primary">Go to Quadratic Equation</a>
+		</div>
+	</div>
+	{% include 'footer.html' %}
+</main>
+
+{% endblock content %}

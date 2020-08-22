@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Welcome to Square Root section !</h1>
+        <h1 style="font-size: 50px;" class="text-warning text-lg-center m-5">&#8730;</h1>
+    </div>
+    <p class="text-center m-4">Here you can calculate Square Root of any number. To do Calculation please proceed
+        further ...</p>
+
+    <div class="card m-5 text-center">
+        <h5 class="card-header">Square Root</h5>
+        <div class="card-body">
+            <h5 class="card-title">Please enter the number!</h5>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Number</span>
+                    </div>
+                    <input required type="number" name="number" aria-label="subject1" class="form-control">
+                </div>
+                <button href="#" class="btn btn-success m-4">Calculate Square Root</button>
+            </form>
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

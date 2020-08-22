@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Welcome to Simple Interest section !</h1>
+        <h1 style="font-size: 50px;" class="text-warning text-lg-center m-5">&#9827;</h1>
+    </div>
+    <p class="text-center m-4">Here you can calculate Simple Interest of some amount with the valid input of pricipal,
+        rate and time. Please input all details correctly and find Simple Interest of your amount. Todo that please
+        proceed further ...</p>
+
+    <div class="card m-5 text-center">
+        <h5 class="card-header">Simple Interest</h5>
+        <div class="card-body">
+            <h5 class="card-title">Enter all the value to find Simple Interest</h5>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Principal</span>
+                    </div>
+                    <input required type="number" name="principal" aria-label="principal" class="form-control">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Rate</span>
+                    </div>
+                    <input required type="number" name="rate" aria-label="rate" class="form-control">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Time</span>
+                    </div>
+                    <input required type="number" name="time" aria-label="time" class="form-control">
+                </div>
+                <button class="btn btn-success m-4">Calculate Simple Interest</button>
+            </form>
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

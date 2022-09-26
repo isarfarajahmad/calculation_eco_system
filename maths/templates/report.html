@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% block content %}
+<main>
+    <div class="text-center innertube">
+        <h1 class="text-danger">Your Updated Report</h1>
+    </div>
+    <div class="container">
+        <div class="text-center card">
+            <h5 class="card-header">
+                Education Assesment Portal
+            </h5>
+            <div class="card-body">
+                <h6>Name: {{user.first_name}} {{user.last_name}}</h6>
+                <h6>Email Id: {{user.email}}</h6>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date/Time</th>
+                            <th scope="col">Metric Number</th>
+                            <th scope="col">Calculation Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for report in reports %}
+                        <tr>
+                            <td>{{report.date}}</td>
+                            <td>{{report.metric}}</td>
+                            <td>{{report.value}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

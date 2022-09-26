@@ -1,0 +1,67 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 2.4.3</h1>
+        <hr>
+        <h4 class="text-center text-primary">Average teaching experienceof full time teachers in the same institution
+            (Data for the latest completed academic year in number of years) </h4>
+        <h6 class="text-center">2.4.3.1:Total experience of full-time teachers </h6>
+        <div class="ml-5">
+            <h5 class="text-success">Data Requirement last five years</h5>
+            <h6 class="ml-5">&#8226; Name and Number of full time teachers with years of teaching experiences</h6>
+        </div>
+        <div class="m-5">
+            <h6 class="text-center">Sum of total experience of full time teachers in the same institution</h6>
+            <h5 class="text-center">Percentage per year =>
+                -----------------------------------------------------------------------------------------------------------------------
+                X
+                100
+            </h5>
+            <h6 class="text-center">Number of full time teachers
+            </h6>
+        </div>
+    </div>
+    <div class="ml-5">
+        <h5 class="text-success">File Description :</h5>
+        <h6 class="ml-5">&#8226; Any additional information</h6>
+        <h6 class="ml-5">&#8226; List of Teachers including their PAN, designation, dept and experience details(Data
+            Template)</h6>
+    </div>
+    <hr>
+    <h5 class="text-center">Percentage per year</h5>
+    <h6 class="text-right m-4 text-danger">Weightage = 10</h6>
+    <div class="text-center card-body m-5">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">Metric Number</th>
+                        <th scope="col">Sum of total experience<span class="text-danger">*</span></th>
+                        <th scope="col">Total number of full time teachers<span class="text-danger">*</span></th>
+                        <th scope="col">Upload File(Optional)</th>
+                        <th scope="col"> Remarks(Optional)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>2.4.3</th>
+                        <td><input type="number" name="subject1" required></td>
+                        <td><input type="number" name="subject2" required></td>
+                        <td><input type="file" name="file1"></td>
+                        <td><input type="text" name="remarks"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-success">Calulate</button>
+        </form>
+        {% for message in messages %}
+        <h3 class="m-5">{{ message }}</h3>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

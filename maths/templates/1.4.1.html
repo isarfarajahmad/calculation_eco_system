@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 1.4.1</h1>
+        <hr>
+        <h4 class="m-3" style="font-size: 25px;">Institution obtains feedback on the syllabus and its transaction at the
+            institution from the following stakeholders</h4>
+        <div class="ml-5">
+            <h5>1.Students</h5>
+            <h5>2.Teachers</h5>
+            <h5>3.Employers</h5>
+            <h5>4.Alumni</h5>
+        </div>
+        <div class="ml-5">
+            <h4 class="text-success">Options :</h4>
+            <div class="ml-5">
+                <h5>1.All of the above</h5>
+                <h5>2.Any 3 of the above</h5>
+                <h5>3.Any 2 of the above</h5>
+                <h5>4.Any 1 of the above</h5>
+                <h5>5.None of the above</h5>
+            </div>
+        </div>
+
+        <div class="ml-5">
+            <h5 class="text-success">Data requirement:</h5>
+            <div class="ml-5">
+                <h5>&#8226; Report of analysis of feedback received from different stakeholders year wise</h5>
+            </div>
+        </div>
+    </div>
+    <div class="ml-5">
+        <h5 class="text-success">File Description:</h5>
+        <div class="ml-5">
+            <h5>&#8226; URL for stakeholder feedback report</h5>
+            <h5>&#8226; Action taken report of the Institutionon feedback report as stated in the minutes of the
+                Governing Council, Syndicate, Board of Management (Upload)</h5>
+            <h5>&#8226; Any additional information</h5>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

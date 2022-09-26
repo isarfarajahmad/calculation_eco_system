@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% block content %}
+<main>
+    <div class="text-center">
+        <h1 class="m-4">Available Submissions</h1>
+        <div class="row">
+            <div class="col">
+                <div class="card card-body">
+                    <form method="GET">
+                        {{myFilter.form}}
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Date/Time</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Metric Number</th>
+                    <th scope="col">No. of Programs</th>
+                    <th scope="col">Total Programs</th>
+                    <th scope="col">Calculation Value</th>
+                    <th scope="col">File</th>
+                    <th scope="col">Remarks</th>
+                </tr>
+            </thead>
+            <tbody id="menu">
+                {% for report in reports %}
+                <tr>
+                    <td>{{report.date}}</td>
+                    <td>{{report.user}}</td>
+                    <td>{{report.metric}}</td>
+                    <td>{{report.subject1}}</td>
+                    <td>{{report.subject2}}</td>
+                    <td>{{report.value}}</td>
+                    {% if report.file %}
+                    <td><a class="btn btn-outline-primary btn-sm" href="{{report.file.url}}">Download</a></td>
+                    {% else %}
+                    <td class="btn btn-secondary btn-sm disabled">Download</td>
+                    {% endif %}
+                    <td>{{report.remarks}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</main>
+{% endblock content %}

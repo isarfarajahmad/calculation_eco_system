@@ -1,47 +1,61 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<main>
-	<div class="innertube">
-		<h1 class="text-center text-danger m-5">Hey, Welcome to Calculation Eco System</h1>
+<header class="bg-primary text-white">
+	<div class="container text-center">
+		<h1>Welcome to Education Assesment Portal</h1>
+		<p class="lead">Here you can go through various assesment and complete your tasks.</p>
 	</div>
-	<h6 class="text-center m-4">Here you can do various types of Mathematical Calculation. If you want to any specific
-		calculation you can automatically move to that section. To check our calculation section please proceed further
-		...</h6>
-	<div class="container card-deck mb-5">
-		<div class="card">
-			<img src="https://previews.123rf.com/images/frender/frender1609/frender160900066/62341955-3d-percentage-sign-isolated-on-white-background.jpg"
-				class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Percentage</h5>
-				<p class="card-text">In this section you can find Percentage of five subjects with just one click. It's
-					very helpful to find Percentage easily ...</p>
+</header>
+<section id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<h2>About this site</h2>
+				<p class="lead">In this website you can go through various assesment available here. It contains various
+					metric which contains various information and you can submit your file to different matric and you
+					can send your remark to us.</p>
+				<ul>
+					<li>Various metrics are availabe.</li>
+					<li>Metrics are divided in various criteria.</li>
+					<li>You can calculate your all your details conveniently.</li>
+				</ul>
 			</div>
-			<a href="/percentage" class="btn btn-primary">Go to Percentage</a>
-		</div>
-		<div class="card">
-			<img src="https://images.squarespace-cdn.com/content/5c101a4e7c9327fdf174b93b/1559675454329-IUTDL7OPUDM0X2OUTAT6/?content-type=image%2Fjpeg"
-				class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Average</h5>
-				<p class="card-text">In this section you can find Average of five subjects with just one click. It's
-					very helpful to find Average easily ...</p>
-			</div>
-			<a href="/average" class="btn btn-primary">Go to Average</a>
-		</div>
-		<div class="card">
-			<img src="https://i.pinimg.com/474x/47/22/7c/47227cf132d1e715b32a7c4026a7a44a.jpg" class="card-img-top"
-				alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Quadratic Equation</h5>
-				<p class="card-text">In this section you can find Quadratic Equation of five subjects with just one
-					click. It's
-					very helpful to find Quadratic Equation easily ...</p>
-			</div>
-			<a href="/quadratic_equation" class="btn btn-primary">Go to Quadratic Equation</a>
 		</div>
 	</div>
-	{% include 'footer.html' %}
-</main>
+</section>
+
+<section id="services" class="bg-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<h2>Services we offer</h2>
+				<p class="lead">We offer services, you can go through different metrics and calculate your percentage or
+					average, for reference if you want you can send a file to us and you can give remark to us as well.
+					We provide a report section where you can see your report and analyse that with your ease.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<h2>Contact us</h2>
+				<p class="lead">You can contact us using below facilities:</p>
+				<ul>
+					<li>Email id: email@google.com</li>
+					<li>Phone : +91 1234567890</li>
+					<li>LinkedIn: /linkedinid</li>
+					<li>GitHub : /github</li>
+					<li>Twitter: @twitter</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include 'footer.html' %}
 
 {% endblock content %}

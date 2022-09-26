@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 2.7.1</h1>
+        <hr>
+        <h4 class="text-center m-3" style="font-size: 25px;">Online student satisfaction survey regarding to teaching
+            learning process.(online survey to be conducted )</h4>
+
+        <div class="ml-5">
+            <h4 class="text-success">Data Requirement: (As per Data Template)</h4>
+            <div class="ml-5">
+                <h5>1.Name/Class/Gender</h5>
+                <h5>2.Student Id Number/Adhar Id number</h5>
+                <h5>3.Mobile number</h5>
+                <h5>4.Email Id</h5>
+                <h5>5.Degree Programme</h5>
+                <h5>(Database of all currently enrolled students need to be prepared and shared with NAAC along with the
+                    online submission of QIF)</h5>
+            </div>
+        </div>
+        <div class="ml-5">
+            <h5 class="text-success">File Description:</h5>
+            <div class="ml-5">
+                <h5>&#8226; Upload any additional information.</h5>
+                <h5>&#8226; Upload database of all currently enrolled students (Data Template) </h5>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

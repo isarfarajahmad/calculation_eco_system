@@ -1,146 +1,151 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body{font-family: 'Poppins', sans-serif;
-     background: #fafafa}
-p{font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+p {
+  font-family: "Poppins", sans-serif;
   font-size: 1.1em;
-	font-weight: 300;
-	line-height: 1.7em;
-	color: #999;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
 }
 a,
 a:hover,
-a:focus{
-	color: inherit;
-	text-decoration: none;
-	transition: all 0.3s;
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
-.navbar{
-	padding: 15px 10px;
-	background: #fff;
-	border: none;
-	border-radius: 0;
-	margin-bottom: 40px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.navbar-btn{
-	box-shadow: none;
-	outline: none!important;
-	border: none;
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.line{
-	width: 100%;
-	height: 1px;
-	border-bottom: 1px dashed #ddd;
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
 }
 
 .wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
+  display: flex;
+  width: 100%;
+  align-items: stretch;
 }
 #sidebar {
-	margin-top: 60px;
-    min-width: 250px;
-    max-width: 250px;
-    background: rgb(14, 12, 12);
-    color: #fff;
-    transition: all 0.3s;
+  margin-top: 60px;
+  min-width: 250px;
+  max-width: 250px;
+  background: rgb(14, 12, 12);
+  color: #fff;
+  transition: all 0.3s;
 }
-#sidebar.active{
-	margin-left: -250px;
-}
-
-#sidebar .sidebar-header{
-	padding: 20px;
-	background: rgb(14, 12, 12);
-}
-#sidebar ul.components{
-	padding: 20px 0px;
-	border-bottom: 1px solid #47748b;
+#sidebar.active {
+  margin-left: -250px;
 }
 
-#sidebar ul p{
-	padding: 10px;
-	font-size: 1.1em;
-	display: block;
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: rgb(14, 12, 12);
+}
+#sidebar ul.components {
+  padding: 20px 0px;
+  border-bottom: 1px solid #47748b;
 }
 
-#sidebar ul li a{
-	padding: 10px;
-	font-size: 1.1em;
-	display: block;
+#sidebar ul p {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
 }
 #sidebar ul li a:hover {
-    color: rgb(14, 12, 12);
-    background: #fff;
+  color: rgb(14, 12, 12);
+  background: #fff;
 }
 
-#sidebar ul li.active>a,
+#sidebar ul li.active > a,
 a[aria-expanded="true"] {
-    color: black;
-    background: #d9d9e0;
+  color: black;
+  background: #d9d9e0;
 }
 a[data-toggle="collapse"] {
-    position: relative;
+  position: relative;
 }
 .dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
 ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #d9d9e0;
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #d9d9e0;
 }
 
 ul.CTAs {
-    padding: 20px;
+  padding: 20px;
 }
 
 ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
-a.download{
-	background: #fff;
-	color: rgb(14, 12, 12);
+a.download {
+  background: #fff;
+  color: rgb(14, 12, 12);
 }
 a.article,
 a.article:hover {
-    background: #d9d9e0 !important;
-    color: black !important;
+  background: #d9d9e0 !important;
+  color: black !important;
 }
 
 #content {
-	width: 100%;
-    padding: 20px;
-    min-height: 100vh;
-	transition: all 0.3s;
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
 }
 
-@media(maz-width:768px){
-	#sidebar{margin-left: -250px;}
-	#sidebar.active{
-		margin-left: 0px;
-	}
-	#sidebarCollapse span{
-		display: none;
-	}
+@media (maz-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0px;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
 }
 .sublink {
-	color: white;
-	background-color: rgb(78, 74, 74);
+  color: white;
+  background-color: rgb(78, 74, 74);
 }
 .sublink:hover {
-	color: black;
-	background-color: white;
+  color: black;
+  background-color: white;
 }

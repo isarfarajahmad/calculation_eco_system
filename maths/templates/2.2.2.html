@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 2.2.2</h1>
+        <hr>
+        <h4 class="text-center m-3" style="font-size: 25px;">Student-Full time teacher ratio (Data for the latest
+            completed academic year)</h4>
+        <div class="ml-5">
+            <h4 class="text-success">Data Requirement for last five years:<span class="text-warning">(As per Data
+                    Template)</span></h4>
+            <div class="ml-5">
+                <h5>&#8226; Total number of Students enrolled in the Institution</h5>
+                <h5>&#8226; Total number of full time teachers in the Institution</h5>
+            </div>
+        </div>
+
+        <div class="ml-5">
+            <h5 class="text-success">File Description:</h5>
+            <div class="ml-5">
+                <h5>&#8226; Any additional information</h5>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

@@ -1,0 +1,89 @@
+{% extends 'main.html' %}
+{% block content %}
+<main>
+    <div class="text-center">
+        <h1 class="m-4">Available Submissions</h1>
+        <br>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Date/Time</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Metric Number</th>
+                    <th scope="col">No. of Programs</th>
+                    <th scope="col">Total Programs</th>
+                    <th scope="col">Calculation Value</th>
+                    <th scope="col">File</th>
+                    <th scope="col">Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for report in reports %}
+                <tr>
+                    <td>{{report.date}}</td>
+                    <td>{{report.user.email}}</td>
+                    <td>{{report.metric}}</td>
+                    <td>{{report.subject1}}</td>
+                    <td>{{report.subject2}}</td>
+                    <td>{{report.value}}</td>
+                    {% if report.file %}
+                    <td><a class="btn btn-outline-primary btn-sm" href="{{report.file.url}}">Download</a></td>
+                    {% else %}
+                    <td class="btn btn-secondary btn-sm disabled">Download</td>
+                    {% endif %}
+                    <td>{{report.remarks}}</td>
+                </tr>
+                {% endfor %}
+                {% for report in reports2 %}
+                <tr>
+                    <td>{{report.date}}</td>
+                    <td>{{report.user.email}}</td>
+                    <td>{{report.metric}}</td>
+                    <td>{{report.subject1}}</td>
+                    <td>{{report.subject2}}</td>
+                    <td>{{report.value}}</td>
+                    {% if report.file %}
+                    <td><a class="btn btn-outline-primary btn-sm" href="{{report.file.url}}">Download</a></td>
+                    {% else %}
+                    <td class="btn btn-secondary btn-sm disabled">Download</td>
+                    {% endif %}
+                    <td>{{report.remarks}}</td>
+                </tr>
+                {% endfor %}
+                {% for report in reports3 %}
+                <tr>
+                    <td>{{report.date}}</td>
+                    <td>{{report.user.email}}</td>
+                    <td>{{report.metric}}</td>
+                    <td>{{report.subject1}}</td>
+                    <td>{{report.subject2}}</td>
+                    <td>{{report.value}}</td>
+                    {% if report.file %}
+                    <td><a class="btn btn-outline-primary btn-sm" href="{{report.file.url}}">Download</a></td>
+                    {% else %}
+                    <td class="btn btn-secondary btn-sm disabled">Download</td>
+                    {% endif %}
+                    <td>{{report.remarks}}</td>
+                </tr>
+                {% endfor %}
+                {% for report in reports4 %}
+                <tr>
+                    <td>{{report.date}}</td>
+                    <td>{{report.user.email}}</td>
+                    <td>{{report.metric}}</td>
+                    <td>{{report.subject1}}</td>
+                    <td>{{report.subject2}}</td>
+                    <td>{{report.value}}</td>
+                    {% if report.file %}
+                    <td><a class="btn btn-outline-primary btn-sm" href="{{report.file.url}}">Download</a></td>
+                    {% else %}
+                    <td class="btn btn-secondary btn-sm disabled">Download</td>
+                    {% endif %}
+                    <td>{{report.remarks}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}

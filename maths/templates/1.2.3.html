@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 1.2.3</h1>
+        <hr>
+        <h4 class="text-center text-primary">Average percentage of students enrolled in Certificate/ Add-on programs as
+            against the total number of students during the last five years</h4>
+        <h6 class="text-center">1.2.3.1. Number of students enrolled in subject related Certificate or Add-on programs
+            year wise during last five years</h6>
+        <div class="ml-5">
+            <h5 class="text-success">Data Requirement: (As per Data Template)</h5>
+            <h6 class="ml-5">&#8226; Total number of students enrolled in certificate / Add –on programs</h6>
+            <h6 class="ml-5">&#8226; Total number of students across all the programs</h6>
+        </div>
+        <h2 class="text-center text-danger">-:Formula:-</h2>
+        <div class="m-5">
+            <h6 class="text-center">Total number of students enrolled in certificate/Add-on programmes</h6>
+            <h5 class="text-center">Percentage per year =
+                ------------------------------------------------------------------------------------------------------------
+                X 100
+            </h5>
+            <h6 class="text-center">Total Number of students across all the programs</h6>
+        </div>
+        <div class="m-5">
+            <h6 class="text-center"><span class="ml-5" style="font-size: 30px;">&#8721;</span> Percentage per year</h6>
+            <h5 class="text-center mr-5">Average percentage =
+                --------------------------------------------------------------
+            </h5>
+            <h6 class="text-center">5</h6>
+        </div>
+    </div>
+    <div class="ml-5">
+        <h5 class="text-success">File Description (Upload)</h5>
+        <h6 class="ml-5">&#8226; Any additional information</h6>
+        <h6 class="ml-5">&#8226; Details of the students enrolled in Subjects related to certificate/Add-on programs
+        </h6>
+    </div>
+    <hr>
+    <h5 class="text-center">Average Percentage</h5>
+    <h6 class="text-right m-4 text-danger">Weightage = 10</h6>
+    <div class="text-center card-body m-5">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">Metric Number</th>
+                        <th scope="col">Total students Enrolled<span class="text-danger">*</span></th>
+                        <th scope="col">Total Students<span class="text-danger">*</span></th>
+                        <th scope="col">File(Optional)</th>
+                        <th scope="col">Remarks(Optional)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1.2.3</th>
+                        <td><input type="number" name="subject1" required></td>
+                        <td><input type="number" name="subject2" required></td>
+                        <td><input type="file" name="file1"></td>
+                        <td><input type="text" name="remarks"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button name="value" class="btn btn-success">Calulate Average Percentage</button>
+        </form>
+        {% for message in messages %}
+        <h3 class="m-5">{{ message }}</h3>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

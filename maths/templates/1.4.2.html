@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 1.4.2</h1>
+        <hr>
+        <h4 class="m-3" style="font-size: 25px;">Feedback process of the Institution may be classified as follows:</h4>
+        <div class="ml-5">
+            <h4 class="text-success">Options :</h4>
+            <div class="ml-5">
+                <h5>A. Feedback collected, analysed and action taken and feedback available on website</h5>
+                <h5>B. Feedback collected, analysed and action has been taken </h5>
+                <h5>C. Feedback collected and analysed</h5>
+                <h5>D.Feedback collected</h5>
+                <h5>E.Feedback not collected</h5>
+            </div>
+        </div>
+
+        <div class="ml-5">
+            <h5 class="text-success">Documents:</h5>
+            <div class="ml-5">
+                <h5>&#8226; Upload Stakeholders feedback report, Action taken report of the institute on it as stated in
+                    the minutes of the Governing Council, Syndicate, Board of Management</h5>
+            </div>
+        </div>
+    </div>
+    <div class="ml-5">
+        <h5 class="text-success">File Description:</h5>
+        <div class="ml-5">
+            <h5>&#8226; URL for feedback report</h5>
+            <h5>&#8226; Any additional information</h5>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

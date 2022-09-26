@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1 class="text-center text-danger m-5">Metric 1.1.3</h1>
+<hr>
+<h4 class="m-3" style="font-size: 25px;">Teachers of the Institution participate in following activities related
+    to curriculum development and assessment of the affiliating University and/are represented on the following
+    academic bodies during the last five years.</h4>
+<div class="ml-5">
+    <h5>1.Academic council/BoS of Affiliating university</h5>
+    <h5>2.Setting of question papers for UG/PG programs</h5>
+    <h5>3.Design andDevelopment of Curriculum for Add on/ certificate/ Diploma Courses</h5>
+    <h5>4.Assessment /evaluation process of theaffiliating University</h5>
+</div>
+<div class="ml-5">
+    <h4 class="text-success">Options :</h4>
+    <div class="ml-5">
+        <h5>1.All of the above</h5>
+        <h5>2.Any 3 of the above</h5>
+        <h5>3.Any 2 of the above</h5>
+        <h5>4.Any 1 of the above</h5>
+        <h5>5.None of the above</h5>
+    </div>
+</div>
+
+<div class="ml-5">
+    <h5 class="text-success">Data requirement: <span class="text-warning">(As per Data Template)</span></h5>
+    <div class="ml-5">
+        <h5>&#8226; Number of teachers participated</h5>
+        <h5>&#8226; Name of the body in which full time teacher participated</h5>
+        <h5>&#8226; Total number of teachers</h5>
+    </div>
+</div>
+
+
+<p class="text-center m-4">
+    <span class="text-info">Documents:</span>
+    Upload the scanned copies of theletters issued by the affiliating university / institutions w.r.t the activity
+    in which the teachers are involved.</p>
+
+<div class="ml-5">
+    <h5 class="text-success">File Description:</h5>
+    <div class="ml-5">
+        <h5>&#8226; Details of participation of teachers in various bodies/activities provided as a response to the
+            metric</h5>
+        <h5>&#8226; Any additional information</h5>
+    </div>
+</div>
+{% include 'footer.html' %}
+
+{% endblock content %}

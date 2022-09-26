@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 1.2.2</h1>
+        <hr>
+        <h4 class="text-center m-3" style="font-size: 25px;">Number of Add on /Certificate programs offered during the
+            last five years</h4>
+        <h5 class="text-center ">1.2.2.1:How many Add on /Certificate programs are added within the last 5 years</h5>
+        <div class="ml-5">
+            <h4 class="text-success">Data Requirement for last five years:<span class="text-warning">(As per Data
+                    Template)</span></h4>
+            <h5 class="text-danger">The template is combined with 1.2.3</h5>
+            <div class="ml-5">
+                <h5>&#8226; Names of the Add on /Certificate programs with 30 or more contact hours</h5>
+                <h5>&#8226; No. of times offered during the same year</h5>
+                <h5>&#8226; Total no. of students completing the course in the year</h5>
+            </div>
+        </div>
+
+        <div class="ml-5">
+            <h5 class="text-success">File Description:</h5>
+            <div class="ml-5">
+                <h5>&#8226; Any additional information</h5>
+                <h5>&#8226; Brochure or any other document relating to Add on /Certificate programs </h5>
+                <h5>&#8226; List of Add on /Certificate programs (Data Template )</h5>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+</main>
+
+{% endblock content %}

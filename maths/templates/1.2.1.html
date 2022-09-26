@@ -1,0 +1,67 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main>
+    <div class="innertube">
+        <h1 class="text-center text-danger m-5">Metric 1.2.1</h1>
+        <hr>
+        <h4 class="text-center text-primary">Percentage of Programmes in which Choice Based Credit System (CBCS)/
+            elective course system has been implemented </h4>
+        <h6 class="text-center">1.2.1.1. Number of Programmesin which CBCS/ Elective course system implemented</h6>
+        <div class="ml-5">
+            <h5 class="text-success">Data Requirement: (As per Data Template)</h5>
+            <h6 class="ml-5">&#8226; Name of all Programmesadopting CBCS</h6>
+            <h6 class="ml-5">&#8226; Name of all Programmesadopting
+                elective course system</h6>
+        </div>
+        <div class="m-5">
+            <h6 class="text-center">Number of Programmes in which CBCS or elective course system implemented</h6>
+            <h5 class="text-center">Formula =>
+                --------------------------------------------------------------------------------------------------- X
+                100
+            </h5>
+            <h6 class="text-center">Total Number of Programmes Offered</h6>
+        </div>
+    </div>
+    <div class="ml-5">
+        <h5 class="text-success">File Description (Upload)</h5>
+        <h6 class="ml-5">&#8226; Any additional information</h6>
+        <h6 class="ml-5">&#8226; Minutes of relevant Academic Council/ BOS meetings</h6>
+        <h6 class="ml-5">&#8226; Institutional data in prescribed format (Data Template)</h6>
+    </div>
+    <hr>
+    <h5 class="text-center">Percentage of Programmes</h5>
+    <h6 class="text-right m-4 text-danger">Weightage = 10</h6>
+    <div class="text-center card-body m-5">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">Metric Number</th>
+                        <th scope="col">Number of Programmes <span class="text-danger">*</span></th>
+                        <th scope="col">Total Programmes <span class="text-danger">*</span></th>
+                        <th scope="col">Upload File(Optional)</th>
+                        <th scope="col"> Remarks(Optional)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1.2.1</th>
+                        <td><input type="number" name="subject1" required></td>
+                        <td><input type="number" name="subject2" required></td>
+                        <td><input type="file" name="file1"></td>
+                        <td><input type="text" name="remarks"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-success">Calulate</button>
+        </form>
+        {% for message in messages %}
+        <h3 class="m-5">{{ message }}</h3>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+</main>
+
+{% endblock content %}
